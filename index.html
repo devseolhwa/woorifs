@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우리펀드서비스</title>
+    <link rel="SHORTCUT ICON" href="assets/images/favicon.svg">
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/aos.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+    <script src="assets/js/lib/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/lib/ScrollTrigger.min.js"></script>
+    <script src="assets/js/lib/gsap.min.js"></script>
+    <script src="assets/js/lib/swiper.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/scrooth.js"></script><!-- Smooth scrolling -->
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</head>
+<body>
+    
+    <header id="header">
+        <h1 class="logo">
+            <a href="index.html" title="메인페이지로">
+                <img src="assets/images/layout/logo_white.svg" alt="우리펀드서비스">
+            </a>
+        </h1>
+        <div id="gnb">
+            <ul>
+                <li>
+                    <a href="#">회사소개</a>
+                    <ul>
+                        <li><a href="#">CEO 인사말</a></li>
+                        <li><a href="#">경영철학</a></li>
+                        <li><a href="#">회사연혁</a></li>
+                        <li><a href="#">CI 소개</a></li>
+                        <li><a href="#">조직구성</a></li>
+                        <li><a href="#">찾아오시는길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">사업영역</a>
+                    <ul>
+                        <li><a href="#">사업영역소개</a></li>
+                        <li><a href="#">주요업무 및 서비스</a></li>
+                        <li><a href="#">우리펀드서비스 강점</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">제공시스템</a>
+                    <ul>
+                        <li><a href="#">시스템 Overview</a></li>
+                        <li><a href="#">펀드회계시스템</a></li>
+                        <li><a href="#">주문관리시스템</a></li>
+                        <li><a href="#">운용지원시스템</a></li>
+                        <li><a href="#">컴플라이언스</a></li>
+                        <li><a href="#">대체자산</a></li>
+                        <li><a href="#">ETF</a></li>
+                        <li><a href="#">책무구조도</a></li>
+                        <li><a href="#">부동산투자회사(REITs)</a></li>
+                        <li><a href="#">DABAS</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">소식</a>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">리츠공시</a></li>
+                        <li><a href="#">우리펀드소식</a></li>
+                        <li><a href="#">History</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="gnbBg"></div>
+        </div><!-- gnb END -->
+        <div class="rightGroup">
+            <div class="langGroup">
+                <button type="button">KOR</button>
+                <ul>
+                    <li class="active"><a href="#">KOR</a></li>
+                    <li><a href="#">ENG</a></li>
+                </ul>
+            </div>
+            <button type="button" class="btnSitemapOpen"><span>SITEMAP</span></button>
+        </div><!-- rightGroup END -->
+    </header>
+
+    <div class="sitemapWrap">
+        <div class="sitemapHeader">
+            <h1 class="logo">
+                <a href="index.html" title="메인페이지로">
+                    <img src="assets/images/layout/logo_white.svg" alt="우리펀드서비스">
+                </a>
+            </h1>
+            <button type="button" class="btnSitemapClose"><span>메뉴닫기</span></button>
+        </div><!-- sitemapHeader END -->
+        <div class="sitemapBody">
+            <ul>
+                <li>
+                    <a href="#">회사소개</a>
+                    <ul>
+                        <li><a href="#">CEO 인사말</a></li>
+                        <li><a href="#">경영철학</a></li>
+                        <li><a href="#">회사연혁</a></li>
+                        <li><a href="#">CI 소개</a></li>
+                        <li><a href="#">조직구성</a></li>
+                        <li><a href="#">찾아오시는길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">사업영역</a>
+                    <ul>
+                        <li><a href="#">사업영역소개</a></li>
+                        <li><a href="#">주요업무 및 서비스</a></li>
+                        <li><a href="#">우리펀드서비스 강점</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">제공시스템</a>
+                    <ul>
+                        <li><a href="#">시스템 Overview</a></li>
+                        <li><a href="#">펀드회계시스템</a></li>
+                        <li><a href="#">주문관리시스템</a></li>
+                        <li><a href="#">운용지원시스템</a></li>
+                        <li><a href="#">컴플라이언스</a></li>
+                        <li><a href="#">대체자산</a></li>
+                        <li><a href="#">ETF</a></li>
+                        <li><a href="#">책무구조도</a></li>
+                        <li><a href="#">부동산투자회사(REITs)</a></li>
+                        <li><a href="#">DABAS</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">소식</a>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">리츠공시</a></li>
+                        <li><a href="#">우리펀드소식</a></li>
+                        <li><a href="#">History</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- sitemapBody END -->
+    </div><!-- sitemapWrap END -->
+
+    <div id="main">
+        <section class="section" id="section1">
+            <div class="visualWrap">
+                <button class="swiper-button-prev">이전</button>
+                <div class="visualSwiper swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-swiper-autoplay="5000">
+                            <div class="visualBg">
+                                <img src="assets/images/main/img_visual01.jpg" alt="" class="mobileHide">
+                                <img src="assets/images/main/img_visual01_m.jpg" alt="" class="mobileShow">
+                            </div>
+                            <div class="visualText">
+                                <p>우리펀드서비스</p>
+                                <p class="delay">고객의 입장에서 열린 마음으로 <br class="mobileHide" />창조적 변화를 주도합니다</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-swiper-autoplay="5000">
+                            <div class="visualBg">
+                                <img src="assets/images/main/img_visual02.jpg" alt="" class="mobileHide">
+                                <img src="assets/images/main/img_visual02_m.jpg" alt="" class="mobileShow">
+                            </div>
+                            <div class="visualText">
+                                <p>사업소개</p>
+                                <p class="delay">펀드 운용 지원과 기관·가상자산 <br class="mobileHide" />전문 회계를 제공합니다</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-swiper-autoplay="5000">
+                            <div class="visualBg">
+                                <img src="assets/images/main/img_visual03.jpg" alt="" class="mobileHide">
+                                <img src="assets/images/main/img_visual03_m.jpg" alt="" class="mobileShow">
+                            </div>
+                            <div class="visualText">
+                                <p>제공시스템</p>
+                                <p class="delay">신뢰할 수 있는 펀드 관리로 고객의 <br class="mobileHide" />투자가치를 극대화합니다</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- visualSwiper END -->
+                <div class="visualControl"></div>
+                <button class="swiper-button-next">다음</button>
+            </div><!-- visualWrap END -->
+        </section><!-- section1 END -->
+
+        <section class="section" id="section2">
+            <div class="serviceGroup">
+                <div class="titleGroup">
+                    <p class="sm">주요업무 및 서비스</p>
+                    <p class="lg">
+                        고객의 미래와 함께하는 <br /><span>우리펀드서비스</span>
+                    </p>
+                </div>
+                <div class="serviceSwiper">
+                    <div class="serviceGallery">
+                        <button class="swiper-button-prev">이전</button>
+                        <div class="swiper serviceGallerySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="assets/images/main/img_service01.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="assets/images/main/img_service02.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="assets/images/main/img_service03.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        <button class="swiper-button-next">다음</button>
+                    </div><!-- serviceGallery END -->
+                    <div class="serviceInfo">
+                        <div class="pagination"></div>
+                        <div class="swiper serviceInfoSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h3 class="lg">집합투자기구</h3>
+                                    <p class="sm">집합투자기구 펀드회계 및 일반사무관리 <br />서비스업체 입니다.</p>
+                                    <div class="tag">
+                                        <span>펀드회계</span>
+                                        <span>일반사무관리</span>
+                                        <span>펀드운용지원</span>
+                                        <span>기관투자가의 회계서비스</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="lg">부동산투자회사</h3>
+                                    <p class="sm">REITs는 부동산투자회사 업무경험과 <br />시장점유율 상위 업체입니다.</p>
+                                    <div class="tag">
+                                        <span>리츠(REITs)사무</span>
+                                        <span>리츠(REITs)회계</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="lg">가상자산</h3>
+                                    <p class="sm">국내 최초 가상자산 기업회계 <br />서비스 업체 입니다.</p>
+                                    <div class="tag">
+                                        <span>펀드회계</span>
+                                        <span>일반사무관리</span>
+                                        <span>펀드운용지원</span>
+                                        <span>기관투자가의 회계서비스</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- serviceInfo END -->
+                </div><!-- serviceSwiper END -->
+            </div><!-- serviceGroup END -->
+        </section><!-- section2 END -->
+
+        <section class="section" id="section3">
+            <div class="productGroup">
+                <div class="titleGroup">
+                    <em class="en" data-aos="fade-right" data-aos-delay="800">PRODUCT</em>
+                    <p class="sm" data-aos="fade-left">제품소개</p>
+                    <p class="lg" data-aos="fade-left" data-aos-delay="200">일상 속 파트너를 소개합니다.</p>
+                    <a href="#" class="btnMore" data-aos="fade-left" data-aos-delay="400">자세히보기</a>
+                </div>
+                <div class="imgGroup">
+                    <img src="assets/images/main/img_product01.jpg" alt="" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/images/main/img_product02.jpg" alt="" data-aos="fade-up" data-aos-delay="600">
+                    <img src="assets/images/main/img_product03.jpg" alt="" data-aos="fade-up" data-aos-delay="800">
+                </div>
+            </div><!-- productGroup END -->
+        </section><!-- section3 END -->
+
+        <section class="section" id="section4">
+            <div class="managementGroup">
+                <div class="titleGroup">
+                    <em class="en" data-aos="fade-right" data-aos-delay="800">MANAGEMENT</em>
+                    <p class="sm" data-aos="fade-left">지속가능경영</p>
+                    <p class="lg" data-aos="fade-left" data-aos-delay="200">무한한 가능성을 향해 나아갑니다.</p>
+                    <a href="#" class="btnMore" data-aos="fade-left" data-aos-delay="400">자세히보기</a>
+                </div>
+                <div class="imgGroup">
+                    <img src="assets/images/main/img_management.jpg" alt="" data-aos="fade-zoom" data-aos-delay="400">
+                </div>
+            </div><!-- managementGroup END -->
+        </section><!-- section4 END -->
+    
+        <footer id="footer" class="">
+            <div class="footerInner">
+                <div class="footerInfo">
+                    <div class="footerLogo">
+                        <a href="index.html" title="메인페이지로"><img src="assets/images/layout/footer_logo.png" alt="Korea Pharmalink"></a>
+                    </div>
+                    <div class="footerAddress">
+                        <h1>Korea Pharmalink</h1>
+                        <ul>
+                            <li>
+                                <strong>대표이사</strong>
+                                <p>홍길동</p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <strong>대표번호</strong>
+                                <p>02-1234-5678</p>
+                            </li>
+                            <li>
+                                <strong>주소</strong>
+                                <p>경기 성남시 분당구 서현로 170 풍림아이원플러스 T동 1302호</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- footerInfo END -->
+                <p class="footerCopy">2025 Korea Pharmalink Co,Ltd. All rights reserved.</p>
+            </div><!-- footerInner END -->
+        </footer><!-- footer END -->
+    </div><!-- main END -->
+
+    <button type="button" id="btnTop">TOP</button>
+</body>
+</html>
