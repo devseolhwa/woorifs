@@ -7,8 +7,8 @@ $(function () {
 
     function getCurrentDelay(swiper) {
         return (
-            swiper.slides.eq(swiper.activeIndex).data("swiper-autoplay")
-            || swiper.params.autoplay.delay
+            swiper.slides[swiper.activeIndex].dataset.swiperAutoplay ||
+            swiper.params.autoplay.delay
         );
     }
 
@@ -45,7 +45,7 @@ $(function () {
         },
         centeredSlides: true,
         speed: 1000,
-        loop: false,
+        loop: true,
         touchRatio: 0,
         autoplay: {
             delay: 5000,
@@ -69,8 +69,11 @@ $(function () {
         },
         on: {
             init() {
-                this.slides.removeClass("swiper-slide-play");
-                this.slides.eq(this.activeIndex).addClass("swiper-slide-play");
+                this.slides.forEach(slide => {
+                    slide.classList.remove("swiper-slide-play");
+                });
+
+                this.slides[this.activeIndex].classList.add("swiper-slide-play");
 
                 if (isAutoplay) {
                     setTimeout(() => {
@@ -91,8 +94,8 @@ $(function () {
             }
         }
     });
-    // 자동재생 정지 / 재생
-    $(".swiper-button-autoplay").on("click", function () {
+    // 자동재생 정지/재생
+    $(document).on("click", ".swiper-button-autoplay", function () {
         if ($(this).hasClass("on")) {
             isAutoplay = true;
             visualSwiper.autoplay.start();
@@ -105,35 +108,46 @@ $(function () {
         $(this).toggleClass("on");
     });
 
-
-     const pageText = [
+    // 우리펀드서비스
+    const pageText = [
         "집합투자기구",
         "부동산투자회사",
         "가상자산"
     ];
 
-    // 프로필 슬라이드
+    // serviceGallery
     const serviceGallerySwiper = new Swiper('.serviceGallerySwiper', {
-        loop: true,
-        /* autoplay: {
-            delay: 5000,
+        loop: false,
+        speed: 800,
+        autoplay: {
+            delay: 7000,
             disableOnInteraction: false,
-        }, */
+        },
+        effect: 'creative',
+        creativeEffect: {
+            prev: {
+                translate: ['0%', 0, -1],
+            },
+            next: {
+                translate: ['100%', 0, 0],
+            },
+        },
         navigation: {
             nextEl: ".serviceGallery .swiper-button-next",
             prevEl: ".serviceGallery .swiper-button-prev",
         }
     });
 
-    // 컨텐츠 슬라이드
+    // serviceInfo
     const serviceInfoSwiper = new Swiper('.serviceInfoSwiper', {
         effect: 'fade',
+        watchSlidesProgress: true,
         fadeEffect: {
             crossFade: true
         },
         touchRatio: 0,
         allowTouchMove: false,
-        loop: true,
+        loop: false,
         pagination: {
             el: '.serviceInfo .pagination',
             clickable: true,
@@ -143,87 +157,83 @@ $(function () {
                 let html = '';
 
                 pageText.forEach(function (text, index) {
+
+                    const first = text.substring(0, 2);
+                    const last = text.substring(2);
+
                     html += `
                         <button
                             type="button"
                             class="${current === index + 1 ? 'active' : ''}"
                             data-index="${index}">
-                            ${text}
+                            <span><em>${first}</em>${last}</span>
                         </button>
                     `;
                 });
-
                 return html;
             }
         }
     });
 
-    // profile -> content
     serviceGallerySwiper.on('slideChange', function () {
         serviceInfoSwiper.slideToLoop(serviceGallerySwiper.realIndex);
     });
 
     // pagination 클릭
     $('.serviceInfo').on('click', '.pagination button', function () {
-
         const index = $(this).data('index');
-
         serviceGallerySwiper.slideToLoop(index);
         serviceInfoSwiper.slideToLoop(index);
-
     });
 
-    // fullpage
-    /* $("#fullpage").fullpage({
-        licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
-        // fullpage 해제할 브라우저 너비와 높이
-        responsiveWidth : 1399,
-        responsiveHeight : 800,
-        anchors : ["HOME", "INTRODUCE", "PRODUCT", "MANAGEMENT", "FOOTER"],
-        sectionsColor : ["#000", "#FFF", "#f7f7f7", "#FFF", "#222"],
-        css3: true,
-        easing: "easeInOutCubic",
-        easingcss3: "ease",
-        scrollingSpeed: 800,
-        //normalScrollElements: "#section2",
-        scrollOverflow: true,
-        navigation : true,
-        navigationPosition : "left",
-        navigationTooltips : ["HOME", "INTRODUCE", "PRODUCT", "MANAGEMENT", "FOOTER"],
-        showActiveTooltip: true,
-		slidesNavigation: false,
-        slidesNavPosition: 'bottom',
-        //loopBottom : true,
-        afterLoad : function (anchorLink, index) {
-            if($(".section").hasClass("on")){
-                $(".section.active .aos-init").addClass("aos-animate");
-            } else {
-                $(".section .aos-init").removeClass("aos-animate");
-            }
-            $(".section.active .aos-init").addClass("aos-animate");
-            if (index == 2 || index == 3 || index == 4 || index == 5) {
-                $("#header").addClass("show");
-                $("#btnTop").addClass("show");
-                $("#fp-nav").addClass("black");
-            } else {
-                $("#header").removeClass("show");
-                $("#btnTop").removeClass("show");
-                $("#fp-nav").removeClass("black");
-            }
-            if (index == 4 || index == 5) {
-                $("#section4").addClass("ani");
-            } else {
-                $("#section4").removeClass("ani");
-            }
-            if (index == 5) {
-                $("#fp-nav").hide();
-            } else {
-                $("#fp-nav").show();
-            }
-        },
-    });
 
-    $("#btnTop").click(function() {
-        $.fn.fullpage.moveTo("HOME");
-    }); */
+    setTimeout(function(){
+        showLayer();
+    }, 2000);
+
+    function showLayer(){
+        $(".showLayer").each(function(){
+            let $this = $(this);
+            let start_pos = "top bottom";
+            let end_pos =  "bottom top";
+
+            ScrollTrigger.create({
+                trigger: $this,
+                start: start_pos, 
+                end: end_pos,
+                onEnter: function(){
+                    $this.addClass("active");
+                },onLeave: function(){
+                    $this.removeClass("active");
+                },onEnterBack: function(){
+                    $this.addClass("active");
+                },onLeaveBack: function(){
+                    $this.removeClass("active");
+                }
+            });
+        });
+    }
+
+    // scroll 
+    $(window).scroll(function() {
+        var $window = $(window),
+            $body = $("body"),
+            $changeBg = $(".changeBg");
+        
+        var scroll = $window.scrollTop() + ($window.height() / 3);
+    
+        $changeBg.each(function () {
+            var $this = $(this);
+            
+            if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+                    
+                $body.removeClass(function (index, css) {
+                return (css.match (/(^|\s)color-\S+/g) || []).join(" ");
+                });
+                
+                $body.addClass("color-" + $(this).data("color"));
+            }
+        });    
+    }).scroll();
+    
 });

@@ -13,6 +13,7 @@
 *{font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
 html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
 body {font-size: 18px;color: #555;line-height: 1.5;-webkit-animation: fade 0.7s ease-in-out both;-moz-animation: fade 0.7s ease-in-out both;-ms-animation: fade 0.7s ease-in-out both;-o-animation: fade 0.7s ease-in-out both;animation: fade 0.7s ease-in-out both;}
+body{transition: background-color 0.8s ease;}
 html, body, div, span, iframe, p, dl,  dt, dd, ol, ul, li, fieldset, form, label, legend, input, textarea, button, select, table, th, td, article, aside, section, figure, figcaption, img {margin: 0;padding: 0;border: 0;}
 iframe {overflow: auto;width: 100%;border: 0;}
 table {width: 100%;border-collapse: separate;border-spacing: 0;font-size: inherit;}

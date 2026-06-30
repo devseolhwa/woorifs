@@ -152,7 +152,7 @@
         <section class="section" id="section1">
             <div class="visualWrap">
                 <button class="swiper-button-prev">이전</button>
-                <div class="visualSwiper swiper-container">
+                <div class="swiper visualSwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" data-swiper-autoplay="5000">
                             <div class="visualBg">
@@ -191,9 +191,9 @@
             </div><!-- visualWrap END -->
         </section><!-- section1 END -->
 
-        <section class="section" id="section2">
+        <section class="section changeBg" id="section2" data-color="white">
             <div class="serviceGroup">
-                <div class="titleGroup">
+                <div class="titleGroup showLayer">
                     <p class="sm">주요업무 및 서비스</p>
                     <p class="lg">
                         고객의 미래와 함께하는 <br /><span>우리펀드서비스</span>
@@ -201,6 +201,9 @@
                 </div>
                 <div class="serviceSwiper">
                     <div class="serviceGallery">
+                        <span class="orbit orbit1"></span>
+                        <span class="orbit orbit2"></span>
+                        <span class="orbit orbit3"></span>
                         <button class="swiper-button-prev">이전</button>
                         <div class="swiper serviceGallerySwiper">
                             <div class="swiper-wrapper">
@@ -250,62 +253,70 @@
             </div><!-- serviceGroup END -->
         </section><!-- section2 END -->
 
-        <section class="section" id="section3">
-            <div class="productGroup">
-                <div class="titleGroup">
-                    <em class="en" data-aos="fade-right" data-aos-delay="800">PRODUCT</em>
-                    <p class="sm" data-aos="fade-left">제품소개</p>
-                    <p class="lg" data-aos="fade-left" data-aos-delay="200">일상 속 파트너를 소개합니다.</p>
-                    <a href="#" class="btnMore" data-aos="fade-left" data-aos-delay="400">자세히보기</a>
+        <section class="section changeBg" id="section3" data-color="blue">
+            <div class="newGroup">
+                <div class="titleGroup showLayer">
+                    <p class="sm">우리펀드 소식</p>
+                    <p class="lg">
+                        우리펀드서비스의 <br /><span>다양한 소식</span>을 만나보세요
+                    </p>
                 </div>
-                <div class="imgGroup">
-                    <img src="assets/images/main/img_product01.jpg" alt="" data-aos="fade-up" data-aos-delay="400">
-                    <img src="assets/images/main/img_product02.jpg" alt="" data-aos="fade-up" data-aos-delay="600">
-                    <img src="assets/images/main/img_product03.jpg" alt="" data-aos="fade-up" data-aos-delay="800">
-                </div>
+                
             </div><!-- productGroup END -->
         </section><!-- section3 END -->
 
-        <section class="section" id="section4">
-            <div class="managementGroup">
-                <div class="titleGroup">
-                    <em class="en" data-aos="fade-right" data-aos-delay="800">MANAGEMENT</em>
-                    <p class="sm" data-aos="fade-left">지속가능경영</p>
-                    <p class="lg" data-aos="fade-left" data-aos-delay="200">무한한 가능성을 향해 나아갑니다.</p>
-                    <a href="#" class="btnMore" data-aos="fade-left" data-aos-delay="400">자세히보기</a>
+        <section class="section showLayer" id="section4">
+            <div class="bg"></div>
+            <div class="introductionGroup">
+                <div class="titleGroup showLayer">
+                    <p class="sm">우리펀드 소개</p>
+                    <p class="lg">
+                        고객 제일의 정신으로<br />
+                        <span>모두에게 감동을 주는</span> 100년 기업을<br />
+                        이루겠습니다.
+                    </p>
                 </div>
-                <div class="imgGroup">
-                    <img src="assets/images/main/img_management.jpg" alt="" data-aos="fade-zoom" data-aos-delay="400">
-                </div>
-            </div><!-- managementGroup END -->
+                <ul class="introductionList">
+                    <li>
+                        <span class="icon"><img src="assets/images/main/icon_vision.svg" alt=""></span>
+                        <h3 class="en">VISION</h3>
+                        <span class="sm">오늘의 혁신으로 내일의 가치를 창조</span>
+                        <p class="md">시장을 선도하는 전문 역량으로 미래를 향한 혁신에 집중하여 고객에게 더 나은 가치를 제공합니다.</p>
+                    </li>
+                    <li>
+                        <span class="icon"><img src="assets/images/main/icon_slogan.svg" alt=""></span>
+                        <h3 class="en">SLOGAN</h3>
+                        <span class="sm">우리 마음속 첫번째 금융</span>
+                        <p class="md">고객에게 신뢰받고 사랑받는 금융 파트너로 거듭나겠다는 확고한 의지를 바탕으로 최상의 금융 서비스를 지향합니다.</p>
+                    </li>
+                    <li>
+                        <span class="icon"><img src="assets/images/main/icon_corevalue.svg" alt=""></span>
+                        <h3 class="en">CORE VALUE</h3>
+                        <span class="sm">고객 I 신뢰 I 전문성 I 혁신</span>
+                        <p class="md">고객을 향한 진심에 시장의 전문성을 갖고 끊임없는 혁신으로 내일의 더 큰 가치를 창조하는 금융 파트너가 되겠습니다.</p>
+                    </li>
+                </ul>
+            </div><!-- introductionGroup END -->
         </section><!-- section4 END -->
-    
-        <footer id="footer" class="">
-            <div class="footerInner">
-                <div class="footerInfo">
-                    <div class="footerLogo">
-                        <a href="index.html" title="메인페이지로"><img src="assets/images/layout/footer_logo.png" alt="Korea Pharmalink"></a>
-                    </div>
-                    <div class="footerAddress">
-                        <h1>Korea Pharmalink</h1>
-                        <ul>
-                            <li>
-                                <strong>대표이사</strong>
-                                <p>홍길동</p>&nbsp;&nbsp;&nbsp;&nbsp;
-                                <strong>대표번호</strong>
-                                <p>02-1234-5678</p>
-                            </li>
-                            <li>
-                                <strong>주소</strong>
-                                <p>경기 성남시 분당구 서현로 170 풍림아이원플러스 T동 1302호</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div><!-- footerInfo END -->
-                <p class="footerCopy">2025 Korea Pharmalink Co,Ltd. All rights reserved.</p>
-            </div><!-- footerInner END -->
-        </footer><!-- footer END -->
     </div><!-- main END -->
+
+    <footer id="footer">
+        <div class="footerInner">
+            <div class="footerInfo">
+                <div class="footerLogo">
+                    <a href="index.html" title="메인페이지로"><img src="assets/images/layout/footer_logo.svg" alt="우리펀드서비스"></a>
+                </div>
+                <ul class="footerMenu">
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">메일주소무단수집거부안내</a></li>
+                    <li><a href="#">웹접근성 이용안내</a></li>
+                    <li><a href="#">CCTV 설치운영지침</a></li>
+                </ul>
+                <p class="address">03921 서울특별시 마포구 월드컵북로 60길 17 우리금융상암센터 2층,3층 우리펀드서비스</p>
+                <p class="copy">COPYRIGHTⓒ 2013 <span>WOORI FUND SERVICES.</span> All rights reserved.</p>
+            </div><!-- footerInfo END -->
+        </div><!-- footerInner END -->
+    </footer><!-- footer END -->
 
     <button type="button" id="btnTop">TOP</button>
 </body>
