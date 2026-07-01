@@ -118,9 +118,9 @@ $(function () {
     // serviceGallery
     const serviceGallerySwiper = new Swiper('.serviceGallerySwiper', {
         loop: false,
-        speed: 800,
+        speed: 1000,
         autoplay: {
-            delay: 7000,
+            delay: 10000,
             disableOnInteraction: false,
         },
         effect: 'creative',
@@ -175,15 +175,28 @@ $(function () {
         }
     });
 
-    serviceGallerySwiper.on('slideChange', function () {
-        serviceInfoSwiper.slideToLoop(serviceGallerySwiper.realIndex);
+    const serviceCircleSwiper = new Swiper('.serviceCircleSwiper', {
+        loop: false,
+        speed: 800,
+        autoplay: {
+            delay: 10000,
+            disableOnInteraction: false,
+        },
     });
 
-    // pagination 클릭
+    serviceGallerySwiper.on('slideChange', function () {
+        const index = serviceGallerySwiper.realIndex;
+
+        serviceInfoSwiper.slideToLoop(index);
+        serviceCircleSwiper.slideToLoop(index);
+    });
+
     $('.serviceInfo').on('click', '.pagination button', function () {
         const index = $(this).data('index');
+
         serviceGallerySwiper.slideToLoop(index);
         serviceInfoSwiper.slideToLoop(index);
+        serviceCircleSwiper.slideToLoop(index);
     });
 
 
@@ -214,26 +227,86 @@ $(function () {
         });
     }
 
-    // scroll 
-    $(window).scroll(function() {
-        var $window = $(window),
-            $body = $("body"),
-            $changeBg = $(".changeBg");
-        
-        var scroll = $window.scrollTop() + ($window.height() / 3);
-    
-        $changeBg.each(function () {
-            var $this = $(this);
-            
-            if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
-                    
-                $body.removeClass(function (index, css) {
-                return (css.match (/(^|\s)color-\S+/g) || []).join(" ");
-                });
-                
-                $body.addClass("color-" + $(this).data("color"));
+    // 우리펀드 소식
+    const navButtons = document.querySelectorAll(".newsNav li button");
+    const newsBoxes = document.querySelectorAll(".newsContents .newsBox");
+    const swiperMap = new Map();
+
+    navButtons.forEach((button, index) => {
+        button.addEventListener("click", function () {
+            document.querySelector(".newsNav li.active")?.classList.remove("active");
+            button.parentElement.classList.add("active");
+            newsBoxes.forEach((box) => {
+                const swiper = swiperMap.get(box);
+                if (swiper) {
+                    swiper.destroy(true, true);
+                    swiperMap.delete(box);
+                }
+                box.classList.remove("active");
+            });
+
+            const activeBox = newsBoxes[index];
+            activeBox.classList.add("active");
+            initializeSlider(activeBox);
+        });
+    });
+
+    function initializeSlider(box) {
+        const container = $(box);
+
+        let progressRAF;
+        let progressStart;
+
+        function stopProgress() {
+            cancelAnimationFrame(progressRAF);
+        }
+
+        function startProgress() {
+            stopProgress();
+            const bar = container.find(".progress");
+            bar.css("width", "0%");
+            progressStart = performance.now();
+            function animate(now) {
+                const elapsed = now - progressStart;
+                const percent = Math.min((elapsed / 5000) * 100, 100);
+                bar.css("width", percent + "%");
+                if (percent < 100) {
+                    progressRAF = requestAnimationFrame(animate);
+                }
             }
-        });    
-    }).scroll();
+            progressRAF = requestAnimationFrame(animate);
+        }
+
+        const swiper = new Swiper(container.find(".newsSlider")[0], {
+            slidesPerView: "auto",
+            spaceBetween: 32,
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            navigation: {
+                prevEl: container.find(".prev")[0],
+                nextEl: container.find(".next")[0]
+            },
+            on: {
+                init() {
+                    const total = container
+                        .find(".swiper-slide:not(.swiper-slide-duplicate)")
+                        .length;
+                    container.find(".swiper-pagination-current").text(1);
+                    container.find(".swiper-pagination-total").text(total);
+                    startProgress();
+                },
+                slideChange() {
+                    container.find(".swiper-pagination-current").text(this.realIndex + 1);
+                    startProgress();
+                }
+            }
+        });
+        swiperMap.set(box, swiper);
+    }
+    initializeSlider(document.querySelector(".newsBox.active"));
     
 });

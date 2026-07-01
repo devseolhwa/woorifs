@@ -5,36 +5,49 @@ $(function(){
         throttleDelay : 99,
         duration: 1000
     });
-    
-    // header 스크롤 고정
-    $(window).on("scroll", function(){
-        const wh = $(window).scrollTop();
-        if(wh <= 0){
-            $("#header").removeClass("fix");
-        } else {
-            $("#header").addClass("fix");
+
+    // header
+    const header = document.querySelector("#header");
+    let previousScroll = 0;
+
+    function handleScroll() {
+        if (!header) return;
+        if (document.body.classList.contains("gnbOpened")) return;
+
+        const currentScroll = window.scrollY;
+        const isTop = currentScroll === 0;
+        const isScrollDown = currentScroll > 150 && currentScroll > previousScroll;
+        const isScrollUp = currentScroll < previousScroll;
+
+        if (isTop) {
+            header.classList.remove("hide", "show");
+        } else if (isScrollDown) {
+            header.classList.remove("show");
+            header.classList.add("hide");
+        } else if (isScrollUp) {
+            header.classList.remove("hide");
+            header.classList.add("show");
         }
-    });
+
+        previousScroll = currentScroll;
+    }
+    window.addEventListener("scroll", handleScroll);
    
     // header mouseover
     $("#header, #gnb").mouseover(function(){
-        $("#header").addClass("on");
-    }).mouseleave(function(){
-        $("#header").removeClass("on");
+        $("#header").addClass("show");
     });
 
     // gnb
     $(document).on("mouseenter", "#gnb > ul > li", function () {
         $(this).addClass("active").siblings("li").removeClass("active");
-        $("#gnb > ul > li > ul").slideDown();
-        $(".gnbBg").slideDown();
+        $("#gnb > ul > li > ul").stop().slideDown();
+        $(".gnbBg").stop().slideDown();
         return false;
     }).on("mouseleave", "#header", function () {
         $("#gnb > ul > li").removeClass("active");
-        //$("#gnb > ul > li > ul").slideUp();
-        //$(".gnbBg").slideUp();
-        $("#gnb > ul > li > ul").hide();
-        $(".gnbBg").hide();
+        $("#gnb > ul > li > ul").stop().slideUp();
+        $(".gnbBg").stop().slideUp();
         return false;
     });
 
@@ -87,6 +100,19 @@ $(function(){
     // 스토어 바로가기
     $(".langGroup button").on("click", function () {
         $(this).parent().toggleClass("active");
+    });
+
+    // 패밀리사이트 열기/닫기
+    const btnSiteOpen = document.querySelector(".btnSiteOpen");
+    const familySiteGroup = document.querySelector(".familysiteGroup");
+    const familySiteList = document.querySelector(".familysiteList");
+
+    btnSiteOpen.addEventListener("click", function () {
+        familySiteGroup.classList.toggle("open");
+
+        const isOpen = familySiteList.style.display === "block";
+        familySiteList.style.display = isOpen ? "none" : "block";
+     
     });
 
 });
