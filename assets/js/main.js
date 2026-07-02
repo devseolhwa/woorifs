@@ -108,6 +108,34 @@ $(function () {
         $(this).toggleClass("on");
     });
 
+    // 요소접근 이벤트
+    setTimeout(function(){
+        showLayer();
+    }, 2000);
+
+    function showLayer(){
+        $(".showLayer").each(function(){
+            let $this = $(this);
+            let start_pos = "top bottom";
+            let end_pos =  "bottom top";
+
+            ScrollTrigger.create({
+                trigger: $this,
+                start: start_pos, 
+                end: end_pos,
+                onEnter: function(){
+                    $this.addClass("active");
+                },onLeave: function(){
+                    $this.removeClass("active");
+                },onEnterBack: function(){
+                    $this.addClass("active");
+                },onLeaveBack: function(){
+                    $this.removeClass("active");
+                }
+            });
+        });
+    }
+
     // 우리펀드서비스
     const pageText = [
         "집합투자기구",
@@ -141,6 +169,7 @@ $(function () {
     // serviceInfo
     const serviceInfoSwiper = new Swiper('.serviceInfoSwiper', {
         effect: 'fade',
+        autoHeight: true,
         watchSlidesProgress: true,
         fadeEffect: {
             crossFade: true
@@ -183,14 +212,12 @@ $(function () {
             disableOnInteraction: false,
         },
     });
-
     serviceGallerySwiper.on('slideChange', function () {
         const index = serviceGallerySwiper.realIndex;
 
         serviceInfoSwiper.slideToLoop(index);
         serviceCircleSwiper.slideToLoop(index);
     });
-
     $('.serviceInfo').on('click', '.pagination button', function () {
         const index = $(this).data('index');
 
@@ -198,34 +225,6 @@ $(function () {
         serviceInfoSwiper.slideToLoop(index);
         serviceCircleSwiper.slideToLoop(index);
     });
-
-
-    setTimeout(function(){
-        showLayer();
-    }, 2000);
-
-    function showLayer(){
-        $(".showLayer").each(function(){
-            let $this = $(this);
-            let start_pos = "top bottom";
-            let end_pos =  "bottom top";
-
-            ScrollTrigger.create({
-                trigger: $this,
-                start: start_pos, 
-                end: end_pos,
-                onEnter: function(){
-                    $this.addClass("active");
-                },onLeave: function(){
-                    $this.removeClass("active");
-                },onEnterBack: function(){
-                    $this.addClass("active");
-                },onLeaveBack: function(){
-                    $this.removeClass("active");
-                }
-            });
-        });
-    }
 
     // 우리펀드 소식
     const navButtons = document.querySelectorAll(".newsNav li button");
@@ -289,6 +288,14 @@ $(function () {
             navigation: {
                 prevEl: container.find(".prev")[0],
                 nextEl: container.find(".next")[0]
+            },
+            breakpoints: {
+                0: {
+                    spaceBetween: 16
+                },
+                1200: {
+                    spaceBetween: 32
+                }
             },
             on: {
                 init() {

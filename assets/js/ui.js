@@ -1,11 +1,5 @@
 $(function(){
 
-    AOS.init({
-        once : true,
-        throttleDelay : 99,
-        duration: 1000
-    });
-
     // header
     const header = document.querySelector("#header");
     let previousScroll = 0;
@@ -50,12 +44,12 @@ $(function(){
         $(".gnbBg").stop().slideUp();
         return false;
     });
-
-    // mobile menu
+    
     $(document).off("click", ".btnSitemapOpen").on("click", ".btnSitemapOpen", function(e) {
         e.preventDefault();
         $(".sitemapWrap").fadeIn().addClass("active");
         $("body").addClass("scrollLock");
+        sitemapInit();
         $("body").on("scroll touchmove mousewheel", function(e) {
             e.preventDefault();
             e.stopPropagation();
@@ -69,18 +63,22 @@ $(function(){
         $("body").off("scroll touchmove mousewheel");
     });
 
-    $(document).off("click", ".sitemapBody > ul > li > a").on("click", ".sitemapBody > ul > li > a", function(e) {
+    // mobile menu
+    $(document).off("click", ".sitemapBody > ul > li > a").on("click", ".sitemapBody > ul > li > a", function (e) {
+        if ($(window).width() > 1199) return;
         e.preventDefault();
-        $(this).parent("li").toggleClass("on").siblings("li").removeClass("on");
-        $(".sitemapBody > ul > li").each(function () {
-            let onCheck = $(this).is(".on");
-            if (onCheck) {
-                $(this).children("ul").slideDown();
-            } else {
-                $(this).children("ul").slideUp();
-            }
-        });
+        $(this).parent("li").addClass("on").siblings().removeClass("on");
     });
+
+    function sitemapInit() {
+        const $items = $(".sitemapBody > ul > li");
+
+        if ($(window).width() <= 1199) {
+            $items.removeClass("on").first().addClass("on");
+        } else {
+            $items.removeClass("on");
+        }
+    }
 
     // 상단으로
     let btnTop = document.querySelector("#btnTop"),
@@ -97,19 +95,18 @@ $(function(){
 		$("html, body").stop().animate({ scrollTop: 0 });
 	});
 
-    // 스토어 바로가기
+    // 다국어 여닫기
     $(".langGroup button").on("click", function () {
         $(this).parent().toggleClass("active");
     });
 
-    // 패밀리사이트 열기/닫기
+    // 패밀리사이트 여닫기
     const btnSiteOpen = document.querySelector(".btnSiteOpen");
     const familySiteGroup = document.querySelector(".familysiteGroup");
     const familySiteList = document.querySelector(".familysiteList");
 
     btnSiteOpen.addEventListener("click", function () {
         familySiteGroup.classList.toggle("open");
-
         const isOpen = familySiteList.style.display === "block";
         familySiteList.style.display = isOpen ? "none" : "block";
      
