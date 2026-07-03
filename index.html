@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우리펀드서비스</title>
+    <link rel="SHORTCUT ICON" href="assets/images/favicon.svg">
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/aos.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+    <script src="assets/js/lib/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/lib/ScrollTrigger.min.js"></script>
+    <script src="assets/js/lib/gsap.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/lib/swiper.min.js"></script>
+    <script src="assets/js/scrooth.js"></script><!-- Smooth scrolling -->
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</head>
+<body>
+    
+    <header id="header">
+        <h1 class="logo">
+            <a href="index.html" title="메인페이지로">
+                <img src="assets/images/layout/logo_white.svg" alt="우리펀드서비스">
+            </a>
+        </h1>
+        <div id="gnb">
+            <ul>
+                <li>
+                    <a href="#">회사소개</a>
+                    <ul>
+                        <li><a href="#">CEO 인사말</a></li>
+                        <li><a href="#">경영철학</a></li>
+                        <li><a href="#">회사연혁</a></li>
+                        <li><a href="#">CI 소개</a></li>
+                        <li><a href="#">조직구성</a></li>
+                        <li><a href="#">찾아오시는길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">사업영역</a>
+                    <ul>
+                        <li><a href="#">사업영역소개</a></li>
+                        <li><a href="#">주요업무 및 서비스</a></li>
+                        <li><a href="#">우리펀드서비스 강점</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">제공시스템</a>
+                    <ul>
+                        <li><a href="#">시스템 Overview</a></li>
+                        <li><a href="#">펀드회계시스템</a></li>
+                        <li><a href="#">주문관리시스템</a></li>
+                        <li><a href="#">운용지원시스템</a></li>
+                        <li><a href="#">컴플라이언스</a></li>
+                        <li><a href="#">대체자산</a></li>
+                        <li><a href="#">ETF</a></li>
+                        <li><a href="#">책무구조도</a></li>
+                        <li><a href="#">부동산투자회사(REITs)</a></li>
+                        <li><a href="#">DABAS</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">소식</a>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">리츠공시</a></li>
+                        <li><a href="#">우리펀드소식</a></li>
+                        <li><a href="#">History</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="gnbBg"></div>
+        </div><!-- gnb END -->
+        <div class="rightGroup">
+            <div class="langGroup">
+                <button type="button">KOR</button>
+                <ul>
+                    <li class="active"><a href="#">KOR</a></li>
+                    <li><a href="#">ENG</a></li>
+                </ul>
+            </div>
+            <button type="button" class="btnSitemapOpen"><span>SITEMAP</span></button>
+        </div><!-- rightGroup END -->
+    </header>
+
+    <div class="sitemapWrap">
+        <div class="sitemapHeader">
+            <h1 class="logo">
+                <a href="index.html" title="메인페이지로">
+                    <img src="assets/images/layout/logo_white.svg" alt="우리펀드서비스">
+                </a>
+            </h1>
+            <div class="langGroup">
+                <button type="button">KOR</button>
+                <ul>
+                    <li class="active"><a href="#">KOR</a></li>
+                    <li><a href="#">ENG</a></li>
+                </ul>
+            </div>
+            <button type="button" class="btnSitemapClose"><span>메뉴닫기</span></button>
+        </div><!-- sitemapHeader END -->
+        <div class="sitemapBody">
+            <ul>
+                <li>
+                    <a href="#">회사소개</a>
+                    <ul>
+                        <li><a href="#">CEO 인사말</a></li>
+                        <li><a href="#">경영철학</a></li>
+                        <li><a href="#">회사연혁</a></li>
+                        <li><a href="#">CI 소개</a></li>
+                        <li><a href="#">조직구성</a></li>
+                        <li><a href="#">찾아오시는길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">사업영역</a>
+                    <ul>
+                        <li><a href="#">사업영역소개</a></li>
+                        <li><a href="#">주요업무 및 서비스</a></li>
+                        <li><a href="#">우리펀드서비스 강점</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">제공시스템</a>
+                    <ul>
+                        <li><a href="#">시스템 Overview</a></li>
+                        <li><a href="#">펀드회계시스템</a></li>
+                        <li><a href="#">주문관리시스템</a></li>
+                        <li><a href="#">운용지원시스템</a></li>
+                        <li><a href="#">컴플라이언스</a></li>
+                        <li><a href="#">대체자산</a></li>
+                        <li><a href="#">ETF</a></li>
+                        <li><a href="#">책무구조도</a></li>
+                        <li><a href="#">부동산투자회사(REITs)</a></li>
+                        <li><a href="#">DABAS</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">소식</a>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">리츠공시</a></li>
+                        <li><a href="#">우리펀드소식</a></li>
+                        <li><a href="#">History</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- sitemapBody END -->
+    </div><!-- sitemapWrap END -->
+
+    <div id="main">
+        <section class="section" id="section1">
+            <div class="visualWrap">
+                <button class="swiper-button-prev">이전</button>
+                <div class="swiper visualSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-swiper-autoplay="5000">
+                            <div class="visualBg">
+                                <img src="assets/images/main/img_visual01.jpg" alt="" class="tabletHide">
+                                <img src="assets/images/main/img_visual01_m.jpg" alt="" class="tabletShow">
+                            </div>
+                            <div class="visualText">
+                                <p>우리펀드서비스</p>
+                                <p class="delay">고객의 입장에서 <br class="tabletShow" />열린 마음으로 <br class="tabletHide" />창조적 <br class="tabletShow" />변화를 주도합니다</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-swiper-autoplay="5000">
+                            <div class="visualBg">
+                                <img src="assets/images/main/img_visual02.jpg" alt="" class="tabletHide">
+                                <img src="assets/images/main/img_visual02_m.jpg" alt="" class="tabletShow">
+                            </div>
+                            <div class="visualText">
+                                <p>사업소개</p>
+                                <p class="delay">펀드 운용 지원과 기관·<br class="tabletShow" />가상자산 <br class="tabletHide" />전문 회계를 <br class="tabletShow" />제공합니다</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-swiper-autoplay="5000">
+                            <div class="visualBg">
+                                <img src="assets/images/main/img_visual03.jpg" alt="" class="tabletHide">
+                                <img src="assets/images/main/img_visual03_m.jpg" alt="" class="tabletShow">
+                            </div>
+                            <div class="visualText">
+                                <p>제공시스템</p>
+                                <p class="delay">신뢰할 수 있는 펀드 <br class="tabletShow" />관리로 고객의 <br class="tabletHide" />투자<br class="tabletShow" />가치를 극대화합니다</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- visualSwiper END -->
+                <div class="visualControl"></div>
+                <button class="swiper-button-next">다음</button>
+            </div><!-- visualWrap END -->
+        </section><!-- section1 END -->
+
+        <section class="section" id="section2">
+            <div class="serviceGroup">
+                <div class="titleGroup showLayer">
+                    <p class="sm">주요업무 및 서비스</p>
+                    <p class="lg">
+                        고객의 미래와 함께하는 <br /><span>우리펀드서비스</span>
+                    </p>
+                </div>
+                <div class="serviceSwiper">
+                    <div class="serviceGallery">
+                        <span class="orbit orbit1"></span>
+                        <span class="orbit orbit2"></span>
+                        <span class="orbit orbit3"></span>
+                        <button class="swiper-button-prev">이전</button>
+                        <div class="swiper serviceGallerySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="assets/images/main/img_service01.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="assets/images/main/img_service02.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="assets/images/main/img_service03.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        <button class="swiper-button-next">다음</button>
+                    </div><!-- serviceGallery END -->
+                    <div class="serviceInfo">
+                        <div class="pagination"></div>
+                        <div class="swiper serviceInfoSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h3 class="lg">집합투자기구</h3>
+                                    <p class="sm">집합투자기구 펀드회계 및 일반사무관리 <br />서비스업체 입니다.</p>
+                                    <div class="tag">
+                                        <span>펀드회계</span>
+                                        <span>일반사무관리</span>
+                                        <span>펀드운용지원</span>
+                                        <span>기관투자가의 회계서비스</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="lg">부동산투자회사</h3>
+                                    <p class="sm">REITs는 부동산투자회사 업무경험과 <br />시장점유율 상위 업체입니다.</p>
+                                    <div class="tag">
+                                        <span>리츠(REITs)사무</span>
+                                        <span>리츠(REITs)회계</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="lg">가상자산</h3>
+                                    <p class="sm">국내 최초 가상자산 기업회계 <br />서비스 업체 입니다.</p>
+                                    <div class="tag">
+                                        <span>펀드회계</span>
+                                        <span>일반사무관리</span>
+                                        <span>펀드운용지원</span>
+                                        <span>기관투자가의 회계서비스</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- serviceInfo END -->
+                    <div class="serviceCircle">
+                        <div class="swiper serviceCircleSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><span class="circle"></span></div>
+                                <div class="swiper-slide"><span class="circle"></span></div>
+                                <div class="swiper-slide"><span class="circle"></span></div>
+                                <div class="swiper-slide"><span class="circle"></span></div>
+                            </div>
+                        </div>
+                    </div><!-- serviceCircle END -->
+                </div><!-- serviceSwiper END -->
+            </div><!-- serviceGroup END -->
+        </section><!-- section2 END -->
+
+        <section class="section" id="section3">
+            <div class="newsGroup">
+                <div class="titleGroup showLayer">
+                    <p class="sm">우리펀드 소식</p>
+                    <p class="lg">
+                        우리펀드서비스의 <br /><span>다양한 소식</span>을 만나보세요
+                    </p>
+                </div>
+                <div class="newsSwiper">
+                    <ul class="newsNav">
+                        <li class="active"><button type="button">알림소식</button></li>
+                        <li><button type="button">보도자료</button></li>
+                    </ul><!-- newsNav END -->
+                    <div class="newsContents">
+                        <div class="newsBox active">
+                            <div class="newsSliderControl">
+                                <div class="newsSliderArrow">
+                                    <button type="button" class="prev">이전</button>
+                                    <button type="button" class="next">다음</button>
+                                </div>
+                                <a href="#" class="btnMore">더 보러가기</a>
+                            </div><!-- newsSliderControl END -->
+                            <div class="newsSlider swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <p class="label">알림소식</p>
+                                            <p class="title">네트워크 장비 구매 입장찰고 네트워크 장비 구매 입장찰고</p>
+                                            <p class="date">2026-06-11</p>
+                                            <em class="icon"></em>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <p class="label">알림소식</p>
+                                            <p class="title">홈페이지 재구축 사업 입찰공고</p>
+                                            <p class="date">2026-03-31</p>
+                                            <em class="icon"></em>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <p class="label">알림소식</p>
+                                            <p class="title">제15기 결산공고</p>
+                                            <p class="date">2026-03-20</p>
+                                            <em class="icon"></em>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <p class="label">알림소식</p>
+                                            <p class="title">네트워크 장비 구매 입장찰고시스템 구축 컨설팅 입찰공고</p>
+                                            <p class="date">2026-02-06</p>
+                                            <em class="icon"></em>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div><!-- newsSlider END -->
+                            <div class="newsSliderCount">
+                                <span class="swiper-pagination-current"></span>
+                                <span class="progressBar">
+                                    <span class="progress"></span>
+                                </span>
+                                <span class="swiper-pagination-total"></span>
+                            </div><!-- newsSliderCount END -->
+                        </div><!-- newsBox END -->
+                        <div class="newsBox">
+                            <div class="newsSliderControl">
+                                <div class="newsSliderArrow">
+                                    <button type="button" class="prev">이전</button>
+                                    <button type="button" class="next">다음</button>
+                                </div>
+                                <a href="#" class="btnMore">더 보러가기</a>
+                            </div><!-- newsSliderControl END -->
+                            <div class="newsSlider swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <p class="label">보도자료</p>
+                                            <p class="title">네트워크 장비 구매 입장찰고 네트워크 장비 구매 입장찰고</p>
+                                            <p class="date">2026-06-11</p>
+                                            <em class="icon"></em>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <p class="label">보도자료</p>
+                                            <p class="title">홈페이지 재구축 사업 입찰공고</p>
+                                            <p class="date">2026-03-31</p>
+                                            <em class="icon"></em>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <p class="label">보도자료</p>
+                                            <p class="title">제15기 결산공고</p>
+                                            <p class="date">2026-03-20</p>
+                                            <em class="icon"></em>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <p class="label">보도자료</p>
+                                            <p class="title">네트워크 장비 구매 입장찰고시스템 구축 컨설팅 입찰공고</p>
+                                            <p class="date">2026-02-06</p>
+                                            <em class="icon"></em>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <p class="label">보도자료</p>
+                                            <p class="title">네트워크 장비 구매 입장찰고시스템 구축 컨설팅 입찰공고</p>
+                                            <p class="date">2026-02-06</p>
+                                            <em class="icon"></em>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div><!-- newsSlider END -->
+                            <div class="newsSliderCount">
+                                <span class="swiper-pagination-current"></span>
+                                <span class="progressBar">
+                                    <span class="progress"></span>
+                                </span>
+                                <span class="swiper-pagination-total"></span>
+                            </div><!-- newsSliderCount END -->
+                        </div><!-- newsBox END -->
+                    </div><!-- newsContents END -->
+                </div><!-- newsSwiper END -->
+            </div><!-- newsGroup END -->
+        </section><!-- section3 END -->
+
+        <section class="section showLayer" id="section4">
+            <div class="bg"></div>
+            <div class="introductionGroup">
+                <div class="titleGroup showLayer">
+                    <p class="sm">우리펀드 소개</p>
+                    <p class="lg">
+                        고객 제일의 정신으로<br />
+                        <span>모두에게 감동을 주는</span> 100년 <br class="tabletShow" />기업을<br class="tabletHide" />
+                        이루겠습니다.
+                    </p>
+                </div>
+                <ul class="introductionList">
+                    <li>
+                        <span class="icon"><img src="assets/images/main/icon_vision.svg" alt=""></span>
+                        <h3 class="en">VISION</h3>
+                        <span class="sm">오늘의 혁신으로 내일의 가치를 창조</span>
+                        <p class="md">시장을 선도하는 전문 역량으로 미래를 향한 혁신에 집중하여 고객에게 더 나은 가치를 제공합니다.</p>
+                    </li>
+                    <li>
+                        <span class="icon"><img src="assets/images/main/icon_slogan.svg" alt=""></span>
+                        <h3 class="en">SLOGAN</h3>
+                        <span class="sm">우리 마음속 첫번째 금융</span>
+                        <p class="md">고객에게 신뢰받고 사랑받는 금융 파트너로 거듭나겠다는 확고한 의지를 바탕으로 최상의 금융 서비스를 지향합니다.</p>
+                    </li>
+                    <li>
+                        <span class="icon"><img src="assets/images/main/icon_corevalue.svg" alt=""></span>
+                        <h3 class="en">CORE VALUE</h3>
+                        <span class="sm">고객 I 신뢰 I 전문성 I 혁신</span>
+                        <p class="md">고객을 향한 진심에 시장의 전문성을 갖고 끊임없는 혁신으로 내일의 더 큰 가치를 창조하는 금융 파트너가 되겠습니다.</p>
+                    </li>
+                </ul>
+            </div><!-- introductionGroup END -->
+        </section><!-- section4 END -->
+    </div><!-- main END -->
+
+    <footer id="footer">
+        <div class="footerInner">
+            <div class="footerInfo">
+                <div class="footerLogo">
+                    <a href="index.html" title="메인페이지로"><img src="assets/images/layout/footer_logo.svg" alt="우리펀드서비스"></a>
+                </div>
+                <ul class="footerMenu">
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">메일주소무단수집거부안내</a></li>
+                    <li><a href="#">웹접근성 이용안내</a></li>
+                    <li><a href="#">CCTV 설치운영지침</a></li>
+                </ul>
+                <p class="address">03921 서울특별시 마포구 월드컵북로 60길 17 우리금융상암센터 2층,3층 우리펀드서비스</p>
+                <p class="copy">COPYRIGHTⓒ 2013 <span>WOORI FUND SERVICES.</span> All rights reserved.</p>
+            </div><!-- footerInfo END -->
+            <div class="familysiteGroup">
+                <button type="button" class="btnSiteOpen"><span>FAMILY SITE</span></button>
+                <div class="familysiteList">
+                    <ul>
+					    <li><a href="http://www.woorifg.com/" target="_blank" title="새창열림">우리금융지주</a></li>
+					    <li><a href="http://www.wooribank.com/" target="_blank" title="새창열림">우리은행</a></li>
+					    <li><a href="http://www.myangel.co.kr" target="_blank" title="새창열림">동양생명</a></li>
+					    <li><a href="http://www.wooricard.com/" target="_blank" title="새창열림">우리카드</a></li>
+					    <li><a href="http://www.woorifcapital.com" target="_blank" title="새창열림">우리금융캐피탈</a></li>
+						<li><a href="http://www.wooriib.com" target="_blank" title="새창열림">우리투자증권</a></li>
+					    <li><a href="http://www.abllife.co.kr" target="_blank" title="새창열림">ABL생명</a></li>
+					    <li><a href="http://www.wooriat.com" target="_blank" title="새창열림">우리자산신탁</a></li>
+						<li><a href="http://www.woorisavingsbank.com" target="_blank" title="새창열림">우리금융저축은행</a></li>
+						<li><a href="https://www.wooriam.kr" target="_blank" title="새창열림">우리자산운용</a></li>
+						<li><a href="http://woorivp.com" target="_blank" title="새창열림">우리벤처파트너스</a></li>
+						<li><a href="http://www.wooripe.com" target="_blank" title="새창열림">우리PE자산운용</a></li>
+						<li><a href="http://www.woorifni.co.kr" target="_blank" title="새창열림">우리금융F&amp;I</a></li>
+						<li><a href="http://www.wooricredit.com" target="_blank" title="새창열림">우리신용정보</a></li>
+						<li><a href="http://www.woorifis.com" target="_blank" title="새창열림">우리FIS</a></li>
+						<li><a href="http://www.wfri.re.kr" target="_blank" title="새창열림">우리금융경영연구소</a></li>
+					</ul>
+                </div><!-- familysiteList END -->
+            </div><!-- familysiteGroup END -->
+        </div><!-- footerInner END -->
+    </footer><!-- footer END -->
+
+    <button type="button" id="btnTop"><img src="assets/images/layout/icon_top.svg" alt=""></button>
+</body>
+</html>
