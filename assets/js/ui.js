@@ -1,5 +1,14 @@
 $(function(){
 
+    $(window).on("load", function () {
+        AOS.refresh();
+    });
+    AOS.init({
+        once : true,
+        throttleDelay : 99,
+        duration: 1000
+    });
+
     // header
     const header = document.querySelector("#header");
     let previousScroll = 0;
