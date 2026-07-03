@@ -233,7 +233,7 @@
     .sitemapBody > ul > li:before{display: none;}
     .sitemapBody > ul > li > a{width: 40%;padding: 4.1026vw 4.1026vw;margin-bottom: 0;font-size: 4.6154vw;color: #333;}
     .sitemapBody > ul > li > a:before, .sitemapBody > ul > li > a:after{display: none;}
-    .sitemapBody > ul > li > ul{display: none;position: absolute;top: 0;left: 40%;width: 60%;min-height: stretch;padding: 0 4.1026vw;background-color: #FFF;background-image: url(../images/layout/bg_sitemap.png);background-size: contain;background-position: 17.9487vw calc(100% + 7.6923vw);background-repeat: no-repeat;box-sizing: border-box;}
+    .sitemapBody > ul > li > ul{display: none;position: absolute;top: 0;left: 40%;width: 60%;min-height: 100%;padding: 0 4.1026vw;background-color: #FFF;background-image: url(../images/layout/bg_sitemap.png);background-size: contain;background-position: 17.9487vw calc(100% + 7.6923vw);background-repeat: no-repeat;box-sizing: border-box;}
     .sitemapBody > ul > li > ul > li{border-bottom: 1px solid #DDD;box-sizing: border-box;}
     .sitemapBody > ul > li > ul > li + li{margin-top: 0;}
     .sitemapBody > ul > li > ul > li > a{display: block;padding: 4.1026vw 0;font-size: 4.1026vw;color: #555;}
