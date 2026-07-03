@@ -109,16 +109,12 @@ $(function () {
     });
 
     $(".visualWrap .swiper-button-next, .visualWrap .swiper-button-prev").on("click", function () {
-
         if (!isAutoplay) {
             isAutoplay = true;
-
             $(".swiper-button-autoplay").removeClass("on");
-
             visualSwiper.autoplay.start();
             startProgress(visualSwiper);
         }
-
     });
 
     // 요소접근 이벤트
