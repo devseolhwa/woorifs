@@ -2,7 +2,7 @@ $(function(){
     // 요소접근 이벤트
     setTimeout(function(){
         showLayer();
-    }, 2000);
+    }, 1000);
 
     function showLayer(){
         $(".showLayer").each(function(){
