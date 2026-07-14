@@ -14,16 +14,34 @@ $(function(){
                 trigger: $this,
                 start: start_pos, 
                 end: end_pos,
-                onEnter: function(){
-                    $this.addClass("active");
-                },onLeave: function(){
-                    $this.removeClass("active");
-                },onEnterBack: function(){
-                    $this.addClass("active");
-                },onLeaveBack: function(){
-                    $this.removeClass("active");
-                }
+                toggleActions: "play reverse play reverse", 
+                toggleClass: "active"
             });
         });
     }
+
+    var activeTab = $(".tabNav li.on a").attr("href");
+    if (activeTab && activeTab.startsWith("#")) {
+        $(activeTab).show();
+    }
+
+    $(".tabNav a").on("click", function (e) {
+        var target = $(this).attr("href");
+
+        if (target && target.startsWith("#") && target.length > 1) {
+            e.preventDefault();
+            $(this).parent("li").addClass("on").siblings().removeClass("on");
+            $(".tabContent").find("[data-aos]").removeClass("aos-animate");
+            $(".tabContent").not(target).find(".showLayer").removeClass("active");
+            $(target).addClass("active").siblings(".tabContent").removeClass("active");
+            setTimeout(function() {
+                AOS.refresh();
+
+                if (typeof ScrollTrigger !== "undefined") {
+                    ScrollTrigger.refresh();
+                }
+            }, 100);
+        }
+    });
+
 });

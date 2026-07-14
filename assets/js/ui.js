@@ -118,7 +118,28 @@ $(function(){
         familySiteGroup.classList.toggle("open");
         const isOpen = familySiteList.style.display === "block";
         familySiteList.style.display = isOpen ? "none" : "block";
-     
+    });
+});
+
+// 팝업열기
+function modalOpen(obj) {
+    var $modal = $(obj);
+
+    $(".modalPopup.show").each(function () {
+        modalClose($(this));
     });
 
-});
+    scroll.stop();
+    $("body").addClass("scrollNo");
+    $modal.fadeIn("fast").addClass("show");
+}
+
+// 팝업닫기
+function modalClose(obj) {
+    var $modal = $(obj);
+
+    scroll.start();
+    $("body").removeClass("scrollNo");
+    $modal.fadeOut("fast").removeClass("show");
+
+}

@@ -106,6 +106,39 @@
 #btnTop img{width: 32px;height: 32px;}
 #btnTop.show{opacity: 1;}
 
+/* popup */
+.scrollNo{overflow: hidden !important;-webkit-overflow-scrolling: touch;}
+.modalPopup{position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0, 0, 0, 0.8);-webkit-overflow-scrolling: touch;z-index: 99999;opacity: 0;overflow-y: auto;overflow-x: hidden;visibility: hidden;-webkit-transition: all 0.5s ease;transition: all 0.5s ease;-webkit-transition-property: opacity, visibility;transition-property: opacity, visibility;-webkit-transition-delay: 100ms;transition-delay: 100ms;}
+.modalCenter{position: absolute;width: 100%;height: auto;min-height: 100%;display: flex;justify-content: center;align-items: center;padding: 40px 20px;box-sizing: border-box;}
+.modalInner{position: relative;max-width: 100%;width: 960px;background: #FFF;border-radius: 24px;border: 4px solid #0083CA;box-sizing: border-box;-webkit-animation: slideOutDown 0.5s;-moz-animation: slideOutDown 0.5s;-ms-animation: slideOutDown 0.5s;-o-animation: slideOutDown 0.5s;animation: slideOutDown 0.5s;-webkit-animation-fill-mode: forwards;animation-fill-mode: forwards;overflow: hidden;}
+.modalHeader{padding: 20px 32px;background: #00A0E1;}
+.modalHeader h4{color: #FFF;font-size: 28px;font-weight: 700;line-height: 150%;}
+.btnModalClose{position: absolute;right: 32px;top: 18px;width: 40px;height: 40px;background: #0083CA;border-radius: 100%;}
+.btnModalClose span{display: block;overflow: hidden;text-indent: -9999px;white-space: nowrap;}
+.btnModalClose:before, .btnModalClose:after{content: "";position: absolute;width: 26px;left: 50%;height: 2px;margin-left: -13px;background: #fff;transition: all 0.5s;will-change: transform;}
+.btnModalClose:before{top: 50%;transform: rotate(45deg);}
+.btnModalClose:after{top: 50%;transform: rotate(135deg);}
+.modalBody{overflow-y: auto;max-height: calc(100vh - 300px);display: flex;flex-direction: column;flex-wrap: nowrap;gap: 16px;padding: 32px;background: #FFF;box-sizing: border-box;word-break: keep-all;}
+.modalBody h6{color: #333;font-size: 18px;font-weight: 700;line-height: 150%;}
+.modalBody h3{color: #333;font-size: 16px;font-weight: 700;line-height: 150%;}
+.modalBody strong{color: #333;font-size: 16px;font-weight: 400;line-height: 150%;}
+.modalBody p{color: #333;font-size: 14px;font-weight: 400;line-height: 150%;}
+.modalBody a{color: #0083CA;font-size: 14px;font-weight: 500;line-height: 150%;border-bottom: 1px solid #0083CA;box-sizing: border-box;}
+.modalBody dl dt{color:#333;font-size: 14px;font-weight: 700;line-height: 150%;}
+.modalBody dl dd{color: #555;font-size: 14px;font-weight: 400;line-height: 150%;}
+.modalBody ol li{color: #555;font-size: 14px;font-weight: 400;line-height: 150%;}
+.policyLink{display: flex;flex-direction: row;flex-wrap: wrap;gap: 10px;}
+.policyLink a{border: 1px solid #0083CA;padding: 5px 20px;color: #0083CA;font-size: 14px;font-weight: 400;line-height: 150%;}
+.modalPopup.show{opacity: 1;visibility: visible;-webkit-transition-delay: 0s;transition-delay: 0s;}
+.modalPopup.show .modalInner{-webkit-animation: slideInUp 0.5s 50ms;-moz-animation: slideInUp 0.5s 50ms;-ms-animation: slideInUp 0.5s 50ms;-o-animation: slideInUp 0.5s 50ms;animation: slideInUp 0.5s 50ms;-webkit-animation-fill-mode: backwards;animation-fill-mode: backwards;}
+.dataTable{border-top: 1px solid #222;border-bottom: 1px solid #ddd;border-right: 1px solid #ddd;box-sizing: border-box;}
+.dataTable th, .dataTable td {height: 40px;padding: 5px 15px;border-top: 1px solid #ddd;border-left: 1px solid #ddd;box-sizing: border-box;color: #666;font-size: 14px;font-weight: 400;line-height: 150%;letter-spacing: -0.8px;text-align: center;}
+.dataTable th {background-color: #FAFAFA;color: #333;font-weight: 500;}
+.dataTable thead tr:first-child > * {border-top: 0;}
+.dataTable tfoot td {background-color: #FAFAFA;color: #333;font-weight: 500;}
+.dataTable colgroup + tbody > tr:first-child > * {border-top: 0;}
+
+
 @media screen and (max-width: 1920px){
 
     #header{height: 7.9167vw;padding: 0 5%;}
@@ -277,6 +310,15 @@
     #btnTop{bottom: 5.1282vw;right: 2.5641vw;width: 10.2564vw;height: 10.2564vw;}
     #btnTop img{width: 6.1538vw;height: 6.1538vw;}
 
+    /* popup */
+    .modalHeader{padding: 12px 20px}
+    .modalHeader h4{font-size: 18px;}
+    .btnModalClose{right: 15px;top: 7px;width: 35px;height: 35px;}
+    .btnModalClose:before, .btnModalClose:after{width: 20px;margin-left: -10px;}
+    .modalBody{gap: 6px;padding: 20px;}
+    .modalBody h6{font-size: 16px;}
+    .modalBody h3, .modalBody strong{font-size: 15px;}
+
 }
 @media screen and (max-width: 767px){
 
@@ -317,5 +359,138 @@
         opacity: 1;
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
+    }
+}
+
+
+@-webkit-keyframes slideInUp {
+    from {
+        -webkit-transform: translate3d(0, 5%, 0);
+        transform: translate3d(0, 5%, 0);
+        visibility: visible;
+        -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+}
+@-moz-keyframes slideInUp {
+    from {
+        -webkit-transform: translate3d(0, 5%, 0);
+        transform: translate3d(0, 5%, 0);
+        visibility: visible;
+        -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+}
+@-ms-keyframes slideInUp {
+    from {
+        -webkit-transform: translate3d(0, 5%, 0);
+        transform: translate3d(0, 5%, 0);
+        visibility: visible;
+        -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+}
+@-o-keyframes slideInUp {
+    from {
+        -webkit-transform: translate3d(0, 5%, 0);
+        transform: translate3d(0, 5%, 0);
+        visibility: visible;
+        -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+}
+@keyframes slideInUp {
+    from {
+        -webkit-transform: translate3d(0, 5%, 0);
+        transform: translate3d(0, 5%, 0);
+        visibility: visible;
+        -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+}
+
+@-webkit-keyframes slideOutDown {
+    from {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        visibility: hidden;
+        -webkit-transform: translate3d(0, 5%, 0);
+        transform: translate3d(0, 5%, 0);
+    }
+}
+@-moz-keyframes slideOutDown {
+    from {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        visibility: hidden;
+        -webkit-transform: translate3d(0, 5%, 0);
+        transform: translate3d(0, 5%, 0);
+    }
+}
+@-ms-keyframes slideOutDown {
+    from {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        visibility: hidden;
+        -webkit-transform: translate3d(0, 5%, 0);
+        transform: translate3d(0, 5%, 0);
+    }
+}
+@-o-keyframes slideOutDown {
+    from {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        visibility: hidden;
+        -webkit-transform: translate3d(0, 5%, 0);
+        transform: translate3d(0, 5%, 0);
+    }
+}
+@keyframes slideOutDown {
+    from {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        visibility: hidden;
+        -webkit-transform: translate3d(0, 5%, 0);
+        transform: translate3d(0, 5%, 0);
     }
 }

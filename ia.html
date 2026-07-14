@@ -22,6 +22,7 @@
     .codinglist .status span{display: block;max-width: 50px;padding: 3px 0;margin: 0 auto;background: #eeeeee;border-radius: 3px;font-size: 13px;color: #000;text-align: center;}
     .codinglist .status span.end{background: #50cd89;color: #fff;}
     .codinglist .status span.ing{background: #aaa;color: #000;}
+    .codinglist .status span.chk{background: #E8344E;color: #fff;}
     .codinglist .memo{font-size: 14px;}
     </style>
 
@@ -35,12 +36,19 @@
             <a href="http://www.woorifs.co.kr/html/kor/index.do">woorifs.co.kr</a>
         </p>
         <table>
+            <colgroup>
+                <col style="width: 15%;">
+                <col style="width: 15%;">
+                <col style="width: 15%;">
+                <col style="width: 15%;">
+                <col style="width: 10%;">
+                <col style="width: 30%;">
+            </colgroup>
             <thead>
                 <tr>
                     <th scope="col">depth1</th>
                     <th scope="col">depth2</th>
                     <th scope="col">depth3</th>
-                    <th scope="col">depth4</th>
                     <th scope="col">파일명</th>
                     <th scope="col">현황</th>
                     <th scope="col">Issue/Memo</th>
@@ -51,15 +59,13 @@
                     <th class="depth">main</th>
                     <td class="depth"></td>
                     <td class="depth"></td>
-                    <td class="depth"></td>
                     <td class="file"><a href="index.html" target="_blank">index.html</a></td>
-                    <td class="status"><span class="end">완료</span></td>
-                    <td class="memo"></td>
+                    <td class="status"><span class="chk">추가</span></td>
+                    <td class="memo">footer의 개인정보처리방침 영역이 팝업으로 디자인되어 메인페이지에만 작업해두었습니다. 참고로 팝업 추가로 인해 아래 파일에 수정 또는 추가항목이 있습니다.<br />[layout.css / ui.js / scrooth.js]</td>
                 </tr>
                 <tr>
                     <th class="depth">회사소개</th>
                     <td class="depth">CEO 인사말</td>
-                    <td class="depth"></td>
                     <td class="depth"></td>
                     <td class="file"><a href="page/0101.html" target="_blank">0101.html</a></td>
                     <td class="status"><span class="end">완료</span></td>
@@ -69,7 +75,6 @@
                     <th class="depth"></th>
                     <td class="depth">경영철학</td>
                     <td class="depth"></td>
-                    <td class="depth"></td>
                     <td class="file"><a href="page/0102.html" target="_blank">0102.html</a></td>
                     <td class="status"><span class="end">완료</span></td>
                     <td class="memo"></td>
@@ -77,7 +82,6 @@
                 <tr>
                     <th class="depth"></th>
                     <td class="depth">회사연혁</td>
-                    <td class="depth"></td>
                     <td class="depth"></td>
                     <td class="file"><a href="page/0103.html" target="_blank">0103.html</a></td>
                     <td class="status"><span class="end">완료</span></td>
@@ -87,7 +91,6 @@
                     <th class="depth"></th>
                     <td class="depth">CI 소개</td>
                     <td class="depth"></td>
-                    <td class="depth"></td>
                     <td class="file"><a href="page/0104.html" target="_blank">0104.html</a></td>
                     <td class="status"><span class="end">완료</span></td>
                     <td class="memo"></td>
@@ -95,7 +98,6 @@
                 <tr>
                     <th class="depth"></th>
                     <td class="depth">조직구성</td>
-                    <td class="depth"></td>
                     <td class="depth"></td>
                     <td class="file"><a href="page/0105.html" target="_blank">0105.html</a></td>
                     <td class="status"><span class="end">완료</span></td>
@@ -105,42 +107,37 @@
                     <th class="depth"></th>
                     <td class="depth">찾아오시는 길</td>
                     <td class="depth"></td>
-                    <td class="depth"></td>
                     <td class="file"><a href="page/0106.html" target="_blank">0106.html</a></td>
-                     <td class="status"><span class="end">완료</span></td>
+                    <td class="status"><span class="end">완료</span></td>
                     <td class="memo"></td>
                 </tr>
                 <tr>
                     <th class="depth">사업영역</th>
                     <td class="depth">사업영역소개</td>
                     <td class="depth"></td>
-                    <td class="depth"></td>
                     <td class="file"><a href="page/0201.html" target="_blank">0201.html</a></td>
-                    <td class="status"><span class=""></span></td>
+                    <td class="status"><span class="end">완료</span></td>
                     <td class="memo"></td>
                 </tr>
                 <tr>
                     <th class="depth"></th>
                     <td class="depth">주요업무 및 서비스</td>
                     <td class="depth"></td>
-                    <td class="depth"></td>
                     <td class="file"><a href="page/0202.html" target="_blank">0202.html</a></td>
-                    <td class="status"><span class=""></span></td>
+                    <td class="status"><span class="end">완료</span></td>
                     <td class="memo"></td>
                 </tr>
                 <tr>
                     <th class="depth"></th>
                     <td class="depth">우리펀드서비스 강점</td>
                     <td class="depth"></td>
-                    <td class="depth"></td>
                     <td class="file"><a href="page/0203.html" target="_blank">0203.html</a></td>
-                    <td class="status"><span class=""></span></td>
+                    <td class="status"><span class="end">완료</span></td>
                     <td class="memo"></td>
                 </tr>
                 <tr>
                     <th class="depth">제공시스템</th>
                     <td class="depth">시스템 Overview</td>
-                    <td class="depth"></td>
                     <td class="depth"></td>
                     <td class="file"><a href="page/0301.html" target="_blank">0301.html</a></td>
                     <td class="status"><span class=""></span></td>
@@ -150,14 +147,12 @@
                     <th class="depth"></th>
                     <td class="depth">펀드회계시스템</td>
                     <td class="depth"></td>
-                    <td class="depth"></td>
                     <td class="file"><a href="page/0302.html" target="_blank">0302.html</a></td>
                     <td class="status"><span class=""></span></td>
                 </tr>
                 <tr>
                     <th class="depth"></th>
                     <td class="depth">주문관리시스템</td>
-                    <td class="depth"></td>
                     <td class="depth"></td>
                     <td class="file"><a href="page/0303.html" target="_blank">0303.html</a></td>
                     <td class="status"><span class=""></span></td>
@@ -166,14 +161,12 @@
                     <th class="depth"></th>
                     <td class="depth">운용지원시스템</td>
                     <td class="depth"></td>
-                    <td class="depth"></td>
                     <td class="file"><a href="page/0304.html" target="_blank">0304.html</a></td>
                     <td class="status"><span class=""></span></td>
                 </tr>
                 <tr>
                     <th class="depth"></th>
                     <td class="depth">컴플라이언스</td>
-                    <td class="depth"></td>
                     <td class="depth"></td>
                     <td class="file"><a href="page/0305.html" target="_blank">0305.html</a></td>
                     <td class="status"><span class=""></span></td>
@@ -182,14 +175,12 @@
                     <th class="depth"></th>
                     <td class="depth">보고서</td>
                     <td class="depth"></td>
-                    <td class="depth"></td>
                     <td class="file"><a href="page/0306.html" target="_blank">0306.html</a></td>
                     <td class="status"><span class=""></span></td>
                 </tr>
                 <tr>
                     <th class="depth"></th>
                     <td class="depth">대체자산</td>
-                    <td class="depth"></td>
                     <td class="depth"></td>
                     <td class="file"><a href="page/0307.html" target="_blank">0307.html</a></td>
                     <td class="status"><span class=""></span></td>
@@ -198,14 +189,12 @@
                     <th class="depth"></th>
                     <td class="depth">ETF</td>
                     <td class="depth"></td>
-                    <td class="depth"></td>
                     <td class="file"><a href="page/0308.html" target="_blank">0308.html</a></td>
                     <td class="status"><span class=""></span></td>
                 </tr>
                 <tr>
                     <th class="depth"></th>
                     <td class="depth">책무구조도</td>
-                    <td class="depth"></td>
                     <td class="depth"></td>
                     <td class="file"><a href="page/0309.html" target="_blank">0309.html</a></td>
                     <td class="status"><span class=""></span></td>
@@ -214,14 +203,12 @@
                     <th class="depth"></th>
                     <td class="depth">리츠시스템</td>
                     <td class="depth"></td>
-                    <td class="depth"></td>
                     <td class="file"><a href="page/0310.html" target="_blank">0310.html</a></td>
                     <td class="status"><span class=""></span></td>
                 </tr>
                 <tr>
                     <th class="depth"></th>
                     <td class="depth">가상자산 기업회계 시스템</td>
-                    <td class="depth"></td>
                     <td class="depth"></td>
                     <td class="file"><a href="page/0311.html" target="_blank">0311.html</a></td>
                     <td class="status"><span class=""></span></td>
@@ -230,7 +217,6 @@
                     <th class="depth">소식</th>
                     <td class="depth">공지사항</td>
                     <td class="depth">목록</td>
-                    <td class="depth"></td>
                     <td class="file"><a href="page/040101.html" target="_blank">040101.html</a></td>
                     <td class="status"><span class="end">완료</span></td>
                     <td class="memo"></td>
@@ -239,7 +225,6 @@
                     <th class="depth"></th>
                     <td class="depth"></td>
                     <td class="depth">상세</td>
-                    <td class="depth"></td>
                     <td class="file"><a href="page/040102.html" target="_blank">040102.html</a></td>
                     <td class="status"><span class="end">완료</span></td>
                     <td class="memo"></td>
@@ -248,7 +233,6 @@
                     <th class="depth"></th>
                     <td class="depth">리츠공시</td>
                     <td class="depth">목록</td>
-                    <td class="depth"></td>
                     <td class="file"><a href="page/0402.html" target="_blank">0402.html</a></td>
                     <td class="status"><span class="end">완료</span></td>
                     <td class="memo"></td>
@@ -257,7 +241,6 @@
                     <th class="depth"></th>
                     <td class="depth">우리펀드소식</td>
                     <td class="depth"></td>
-                    <td class="depth"></td>
                     <td class="file"><a href="page/0403.html" target="_blank">0403.html</a></td>
                     <td class="status"><span class=""></span></td>
                     <td class="memo"></td>
@@ -265,7 +248,6 @@
                 <tr>
                     <th class="depth"></th>
                     <td class="depth">채용공고</td>
-                    <td class="depth"></td>
                     <td class="depth"></td>
                     <td class="file"><a href="page/0404.html" target="_blank">0404.html</a></td>
                     <td class="status"><span class="end">완료</span></td>
