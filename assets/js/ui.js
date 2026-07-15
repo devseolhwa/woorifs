@@ -129,8 +129,7 @@ function modalOpen(obj) {
         modalClose($(this));
     });
 
-    scroll.stop();
-    $("body").addClass("scrollNo");
+    $("body").addClass("scrollLock");
     $modal.fadeIn("fast").addClass("show");
 }
 
@@ -138,8 +137,7 @@ function modalOpen(obj) {
 function modalClose(obj) {
     var $modal = $(obj);
 
-    scroll.start();
-    $("body").removeClass("scrollNo");
+    $("body").removeClass("scrollLock");
     $modal.fadeOut("fast").removeClass("show");
 
 }
