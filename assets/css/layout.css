@@ -130,12 +130,15 @@
 .policyLink a{border: 1px solid #0083CA;padding: 5px 20px;color: #0083CA;font-size: 14px;font-weight: 400;line-height: 150%;}
 .modalPopup.show{opacity: 1;visibility: visible;-webkit-transition-delay: 0s;transition-delay: 0s;}
 .modalPopup.show .modalInner{-webkit-animation: slideInUp 0.5s 50ms;-moz-animation: slideInUp 0.5s 50ms;-ms-animation: slideInUp 0.5s 50ms;-o-animation: slideInUp 0.5s 50ms;animation: slideInUp 0.5s 50ms;-webkit-animation-fill-mode: backwards;animation-fill-mode: backwards;}
-.dataTable{border-top: 1px solid #222;border-bottom: 1px solid #ddd;border-right: 1px solid #ddd;box-sizing: border-box;}
-.dataTable th, .dataTable td {height: 40px;padding: 5px 15px;border-top: 1px solid #ddd;border-left: 1px solid #ddd;box-sizing: border-box;color: #666;font-size: 14px;font-weight: 400;line-height: 150%;letter-spacing: -0.8px;text-align: center;}
-.dataTable th {background-color: #FAFAFA;color: #333;font-weight: 500;}
+.dataTable{background-color: #FFF;border-top: 1px solid #DDD;border-bottom: 1px solid #DDD;box-sizing: border-box;}
+.dataTable th, .dataTable td {height: 30px;padding: 24px 15px;border-top: 1px solid #DDD;box-sizing: border-box;color: #555;font-size: 18px;font-weight: 400;line-height: 150%;letter-spacing: -0.5px;text-align: center;}
+.dataTable th {background-color: #F1F1F1;color: #333;}
+.dataTable th + th{border-left: 1px solid #DDD;}
+.dataTable td + td{border-left: 1px solid #DDD;}
 .dataTable thead tr:first-child > * {border-top: 0;}
-.dataTable tfoot td {background-color: #FAFAFA;color: #333;font-weight: 500;}
+.dataTable tfoot td {background-color: #F1F1F1;color: #333;}
 .dataTable colgroup + tbody > tr:first-child > * {border-top: 0;}
+.modalPopup .dataTable th, .modalPopup .dataTable td{padding: 5px 15px;font-size: 13px;}
 
 
 @media screen and (max-width: 1920px){
@@ -187,6 +190,8 @@
     .familysiteGroup .familysiteList ul li a{padding: 0.4167vw 0.8333vw;font-size: 0.7292vw;}
     #btnTop{bottom: 3.6458vw;right: 3.6458vw;width: 3.1250vw;height: 3.1250vw;}
     #btnTop img{width: 1.6667vw;height: 1.6667vw;}
+
+    .dataTable th, .dataTable td {height: 1.5625vw;padding: 1.2500vw 0.7813vw;font-size: 0.9375vw;letter-spacing: -0.0260vw;}
 
 }
 @media screen and (max-width: 1199px){
@@ -317,6 +322,7 @@
     .modalBody{gap: 6px;padding: 20px;}
     .modalBody h6{font-size: 16px;}
     .modalBody h3, .modalBody strong{font-size: 15px;}
+    .dataTable th, .dataTable td {height: 7.6923vw;padding: 2.5641vw 3.8462vw;font-size: 3.5897vw;letter-spacing: 0;}
 
 }
 @media screen and (max-width: 767px){
