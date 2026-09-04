@@ -128,7 +128,9 @@
 .titleLine span{position: relative;z-index: 1;}
 .titleLine.active:after{width: 100%;}
 .textSm{color: #555;font-size: 24px;font-weight: 400;line-height: 150%;letter-spacing: -0.5px;text-align: center;word-break: keep-all;}
+.textMd{color: #FFF;font-size: 36px;font-weight: 700;line-height: 150%;text-align: center;word-break: keep-all;}/* 20260904 */
 .titleLine + .textSm{margin-top: 16px;}
+.titleLine:has(+.textMd){margin-bottom: 24px;}/* 20260904 */
 .vision{padding: 64px 80px;background-color: #F2F7FD;background-image: url(../images/sub/bg_vision.png);background-position: 783px -80px;background-size: 330px 319px;background-repeat: no-repeat;border: 1px solid #DDD;border-radius: 24px;box-sizing: border-box;}
 .vision strong{font-size: 60px;color: #0067AC;line-height: 130%;font-weight: 700;letter-spacing: -0.5px;font-family: 'Uridaum';}
 .vision strong span{font-size: 48px;font-family: 'Uridaum';}
@@ -212,6 +214,7 @@
 .departmentBody ul li + li{margin-top: 8px;}
 .divisionList .division:nth-child(2){width: 784px;width: 704px;}
 .divisionList .division:nth-child(2):before{height: 260px;}
+.divisionList .division:nth-child(2) .divisionHead{width: 336px;margin-left: 183px;}/* 20260904 */
 .divisionList .division:nth-child(2) .departmentList{display: flex;align-items: flex-start;gap: 32px;}
 .divisionList .division:nth-child(2) .department{width: calc(50% - 16px);}
 .divisionList .division:nth-child(2) .departmentList:before{content:"";position:absolute;left: 24%;top: 210px;width: 52%;height: 1px;background: #BCBCBC;}
@@ -583,6 +586,18 @@
 .patentWrap .text{width: 800px;display: flex;flex-direction: column;gap: 64px;}
 .patentWrap .text p{color: #555;font-size: 24px;font-weight: 400;line-height: 150%;letter-spacing: -0.5px;word-break: keep-all;}
 
+/* 20260904 start */
+.fivepointWrap{background-image: url(../images/sub/bg_fivepoint.jpg);background-color: #E1EEFB;background-position: center top;background-size: contain;background-repeat: no-repeat;margin-top: 60px;padding: 160px 0;box-sizing: border-box;}
+.fivepointList{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center;gap: 32px;margin-top: 64px;}
+.fivepointList li{width: 450px;padding: 32px 32px 48px;background: #FFF;border-radius: 16px;
+border: 1px solid #00A0E1;box-sizing: border-box;text-align: center;}
+.fivepointList .icon{width: 150px;height: 150px;margin: 0 auto;}
+.fivepointList .icon img{width: 100%;height: 100%;}
+.fivepointList .num{margin-top: 8px;color: #0083CA;font-size: 28px;font-weight: 600;line-height: 150%;letter-spacing: -1px;}
+.fivepointList .titB{margin-top: 16px;color: #333;font-size: 30px;font-weight: 700;line-height: 130%;word-break: keep-all;}
+.fivepointList .titS{color: #0083CA;font-size: 20px;font-weight: 700;line-height: 150%;word-break: keep-all;}
+.fivepointList .txt{margin-top: 16px;color: #555;font-size: 18px;font-weight: 400;line-height: 150%;letter-spacing: -0.5px;word-break: keep-all;}
+/* 20260904 end */
 
 @media screen and (max-width: 1920px){
 
@@ -673,7 +688,9 @@
 	.titleLine{margin: 0 auto 3.3333vw;font-size: 2.6042vw;letter-spacing: -0.0260vw;}
 	.titleLine:after{height: 1.5625vw;}
 	.textSm{font-size: 1.2500vw;letter-spacing: -0.0260vw;}
+	.textMd{font-size: 1.8750vw;}/* 20260904 */
 	.titleLine + .textSm{margin-top: 0.8333vw;}
+	.titleLine:has(+.textMd){margin-bottom: 1.2500vw;}/* 20260904 */
 	.vision{padding: 3.3333vw 4.1667vw;background-position: 40.7813vw -4.1667vw;background-size: 17.1875vw 16.6146vw;border-radius: 1.2500vw;}
 	.vision strong{font-size: 3.1250vw;letter-spacing: -0.0260vw;}
 	.vision strong span{font-size: 2.5000vw;}
@@ -737,6 +754,7 @@
 	.departmentBody ul li + li{margin-top: 0.4167vw;}
 	.divisionList .division:nth-child(2){width: 40.8333vw;width: 36.6667vw;}
 	.divisionList .division:nth-child(2):before{height: 13.5417vw;}
+	.divisionList .division:nth-child(2) .divisionHead{width: 17.5000vw;margin-left: 9.5313vw;}/* 20260904 */
 	.divisionList .division:nth-child(2) .departmentList{gap: 1.6667vw;}
 	.divisionList .division:nth-child(2) .department{width: calc(50% - 0.8333vw);}
 	.divisionList .division:nth-child(2) .departmentList:before{left: 24%;top: 10.9375vw;width: 52%;height: 0.0521vw;}
@@ -1036,6 +1054,17 @@
 	.patentWrap .img img{border-radius: 1.2500vw;border: 1.2500vw solid #0083CA;}
 	.patentWrap .text{width: 41.6667vw;gap: 3.3333vw;}
 	.patentWrap .text p{font-size: 1.2500vw;letter-spacing: -0.0260vw;}
+
+	/* 20260904 start */
+	.fivepointWrap{margin-top: 3.1250vw;padding: 8.3333vw 0;}
+	.fivepointList{gap: 1.6667vw;margin-top: 3.3333vw;}
+	.fivepointList li{width: 23.4375vw;padding: 1.6667vw 1.6667vw 2.5000vw;border-radius: 0.8333vw;border: 0.0521vw solid #00A0E1;}
+	.fivepointList .icon{width: 7.8125vw;height: 7.8125vw;}
+	.fivepointList .num{margin-top: 0.4167vw;font-size: 1.4583vw;letter-spacing: -0.0521vw;}
+	.fivepointList .titB{margin-top: 0.8333vw;font-size: 1.5625vw;}
+	.fivepointList .titS{font-size: 1.0417vw;}
+	.fivepointList .txt{margin-top: 0.8333vw;font-size: 0.9375vw;letter-spacing: -0.0260vw;}
+	/* 20260904 end */
 }
 
 @media screen and (max-width: 1199px){
@@ -1215,7 +1244,9 @@
 	.titleLine{margin: 0 auto 6.1538vw;font-size: 7.1795vw;letter-spacing: 0;}
 	.titleLine:after{height: 5.1282vw;}
 	.textSm{font-size: 3.5897vw;letter-spacing: 0;}
+	.textMd{font-size: 5.1282vw;}/* 20260904 */
 	.titleLine + .textSm{margin-top: 2.5641vw;}
+	.titleLine:has(+.textMd){margin-bottom: 6.1538vw;}/* 20260904 */
 	.vision{padding: 4.1026vw;background-position: calc(100% + 25.6410vw) 90%;background-size: 84.6154vw 81.7949vw;border-radius: 4.1026vw;}
 	.vision strong{font-size: 8.2051vw;line-height: 130%;letter-spacing: -0.1282vw;}
 	.vision strong span{font-size: 6.1538vw;}
@@ -1339,8 +1370,8 @@
 	.departmentHead + .departmentBody{margin-top: 2.0513vw;}
 	.departmentBody ul li + li{margin-top: 2.0513vw;}
 	.divisionList .division:nth-child(2){width: 100%;}
-	
 	.divisionList .division:nth-child(2):before{height: 23.0769vw;}
+	.divisionList .division:nth-child(2) .divisionHead{width: 100%;margin-left: 0;}/* 20260904 */
 	.divisionList .division:nth-child(2) .departmentList{gap: 2.0513vw;}
 	.divisionList .division:nth-child(2) .department{width: calc(50% - 1.0256vw);}
 	.divisionList .division:nth-child(2) .department:nth-child(2) .departmentBody{margin-top: 17.6923vw;}
@@ -1895,6 +1926,26 @@
 	.patentWrap .img img{border-radius: 3.0769vw;border: 4.1026vw solid #0083CA;}
 	.patentWrap .text{width: 100%;gap: 6.1538vw;}
 	.patentWrap .text p{font-size: 4.1026vw;letter-spacing: 0;text-align: center;}
+
+	/* 20260904 start */
+	/* .fivepointWrap{background-image: url(../images/sub/bg_fivepoint_m.jpg);background-size: cover;margin-top: 48px;padding: 80px 0 48px;}
+	.fivepointList{gap: 16px;margin-top: 24px;}
+	.fivepointList li{width: 100%;padding: 24px 24px 32px;border-radius: 16px;border: 1px solid #00A0E1;}
+	.fivepointList .icon{width: 100px;height: 100px;}
+	.fivepointList .num{margin-top: 8px;font-size: 24px;letter-spacing: 0;}
+	.fivepointList .titB{margin-top: 16px;font-size: 24px;}
+	.fivepointList .titS{font-size: 16px;}
+	.fivepointList .txt{margin-top: 16px;font-size: 14px;letter-spacing: 0;} */
+
+	.fivepointWrap{background-image: url(../images/sub/bg_fivepoint_m.jpg);background-size: cover;margin-top: 12.3077vw;padding: 20.5128vw 0 12.3077vw;}
+	.fivepointList{gap: 4.1026vw;margin-top: 6.1538vw;}
+	.fivepointList li{width: 100%;padding: 6.1538vw 6.1538vw 8.2051vw;border-radius: 4.1026vw;border: 0.2564vw solid #00A0E1;}
+	.fivepointList .icon{width: 25.6410vw;height: 25.6410vw;}
+	.fivepointList .num{margin-top: 2.0513vw;font-size: 6.1538vw;letter-spacing: 0;}
+	.fivepointList .titB{margin-top: 4.1026vw;font-size: 6.1538vw;}
+	.fivepointList .titS{font-size: 4.1026vw;}
+	.fivepointList .txt{margin-top: 4.1026vw;font-size: 3.5897vw;letter-spacing: 0;}
+	/* 20260904 end */
 }
 
 @media screen and (max-width: 767px){
