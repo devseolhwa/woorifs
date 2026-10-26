@@ -1,0 +1,54 @@
+.sitemapWrap{overflow-y: auto;}
+#gnb > ul > li > ul{min-height: 630px;}
+
+.serviceInfo .serviceInfoSwiper .tag{flex-wrap: wrap;}
+.introductionList li{flex: 1 1;}
+
+.snbList > ul > li > button{padding: 0 50px 0 32px;}
+.corevalue li{width: 300px;}
+.divisionList .divisionHead{text-align: center;}
+.departmentHead{text-align: center;}
+.departmentHead:before{display: none;}
+.businessList li strong{text-align: center;}
+.fundAccounting > li{width: 425px;}
+.fundAccounting > li > .list > li{flex: fit-content;}
+.fundAccounting > li:nth-child(3) .img:after{right: 58%;}
+.realtimeList ul li{font-size: 13px;line-height: 120%;}
+.reportList ul li .md{padding: 0 30px;}
+.modulesInfo .modulesImages ul li{font-size: 15px;}
+.reportprocessSteps .result p{font-size: 20px;}
+.REITsSystem ul{align-items: stretch;}
+.REITsSystem ul li{display: flex;justify-content: center;align-items: center;}
+.skillProcessWrap ul{align-items: stretch;}
+.resultArea ul li{width: 100%;}
+.ciImg li{display: flex;flex-direction: column;align-items: center;}
+
+@media screen and (max-width: 1920px){
+    
+    #gnb > ul > li > ul{min-height: 32.8125vw;}
+    .snbList > ul > li > button{padding: 0 2.6042vw 0 1.6667vw;}
+    .corevalue li{width: 15.6250vw;}
+    .fundAccounting > li{width: 22.1354vw;}
+    .realtimeList ul li{font-size: 0.6771vw;}
+    .modulesInfo .modulesImages ul li{font-size: 0.7333vw;}
+    .reportprocessSteps .result p{font-size: 1.0417vw;}
+}
+@media screen and (max-width: 1199px){
+    .footerMenu li{width: 100%;}
+    .corevalue li{width: 41.0256vw;}
+    .fundAccounting > li{width: 71.7949vw;}
+    .titleLine{font-size: 6.1795vw;justify-content: center;width: fit-content;text-align: center;}
+    .fundAccounting{align-items: center;}
+    .circleWrap .circleList{width: 100%;height: auto;padding: 0;border: 0;}
+    .circleWrap .circleList .img{width: 46.1538vw;padding: 4.6154vw;margin: 0 auto;border: 0.0521vw dashed #0083CA;border-radius: 100%;box-sizing: border-box;}
+    .circleWrap .circleList ul{display: flex;flex-direction: row;flex-wrap: wrap;gap: 10px;margin-top: 20px;}
+    .circleWrap .circleList ul li{position: relative;top: auto !important;left: auto !important;bottom: auto !important;right: auto !important;min-width: auto;width: calc(50% - 5px);}
+    .circleWrap .circleList ul li:before{display: none;}
+    .realtimeList ul li{font-size: 2.6769vw;}
+    .modulesInfo .modulesImages ul li{font-size: 3.0769vw;}
+    .reportprocessSteps .result p{font-size: 4.6154vw;}
+    .virtualassetsWrap:before{top: 232.0256vw;}
+}
+
+/* [#41 esg-en-official-copy] 추가 — 영문 텍스트 길이로 줄바꿈 생겨 높이 들쭉날쭉한 것 보정 */
+.esgTask .head{min-height: 78px;}
